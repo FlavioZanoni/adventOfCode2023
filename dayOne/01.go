@@ -28,28 +28,27 @@ func main() {
 	scanner := bufio.NewScanner(file)
 
 	for scanner.Scan() {
-			line := scanner.Text()
-			matches := reg.FindAllString(line, -1)
+		line := scanner.Text()
+		matches := reg.FindAllString(line, -1)
 
-			if len(matches) == 0 {
-				continue
-			} else {
-				sum := matches[0] + matches[len(matches)-1]
+		if len(matches) == 0 {
+			continue
+		} else {
+			sum := matches[0] + matches[len(matches)-1]
 
-				conversion, err := strconv.Atoi(sum)
+			conversion, err := strconv.Atoi(sum)
 
-				if err != nil {
-					fmt.Println("Error converting string to int:", err)
-					return
-				}
-
-				sumTotal += int32(conversion)
-
-				fmt.Println(sum)
+			if err != nil {
+				fmt.Println("Error converting string to int:", err)
+				return
 			}
 
-	}
+			sumTotal += int32(conversion)
 
+			fmt.Println(sum)
+		}
+
+	}
 
 	fmt.Println("Total:", sumTotal)
 
