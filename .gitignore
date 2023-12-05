@@ -1,0 +1,36 @@
+# Binaries
+*.exe
+*.dll
+*.so
+*.dylib
+
+# Output of the go coverage tool, specifically when used with LiteIDE
+*.out
+
+# Go binary
+bin/
+
+# Mod files
+*.mod
+
+# The go get workspace
+pkg/
+
+# The go 1.11+ module cache/extracted archives
+vendor/
+
+# Dependency directories (remove the comment below if you want to track them in version control):
+# /vendor/
+
+# Compiled Object files, Static and Dynamic libs (Shared Objects)
+*.o
+*.a
+
+# The default output directory for `go build`
+/out/
+
+# Temporary files from building process
+*.tmp
+
+# VS Code Go plugin directory
+.vscode-go/
